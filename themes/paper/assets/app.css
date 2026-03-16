@@ -129,3 +129,10 @@ article {
 .open {
   @apply overflow-hidden;
 }
+
+
+.post-image {
+  width: 45%;
+  display: block;
+  margin: 0 auto;
+}

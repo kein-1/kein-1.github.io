@@ -11,6 +11,11 @@ theme = "paper"
   [caches.images]
     dir = ':cacheDir/images'
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
 [params]
   # color style
   color = 'linen'                           # linen, wheat, gray, light
