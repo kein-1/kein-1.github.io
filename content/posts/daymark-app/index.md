@@ -62,6 +62,12 @@ One big issue with this is if FaceID failed or was not allowed, the toggle would
 Previous I ran into infinite loop issues with toggle when i tracked it via the
 `.onChange` modifier
 
+Another thing I dealt with was using @AppStorage for User Defaults. I wanted to
+mainly keep the logic inside my View Model, so instead of using @AppStorage (which i think
+is mainly designed for views), I used the standard User Defaults `get/set`.
+For properties i was monitoring (i.e user notification time and preference),
+I had the value saved but called `didSet` on it to update the UserDefaults
+
 The last tough feature was adding voice and microphone support. I basically took
 the code from Apple's sample code for speech recognition and adapted it to my
 app. Speech can get surprisingly tricky to handle: once again there is OS level
