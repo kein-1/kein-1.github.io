@@ -47,7 +47,7 @@ with it." />
 
   <link rel="preload" as="image" href="https://github.com/kein-1.png" />
 
-  <link rel="preload" as="image" href="http://localhost:1313/github.svg" /><link rel="preload" as="image" href="http://localhost:1313/linkedin.svg" /><link rel="preload" as="image" href="http://localhost:1313/rss.svg" />
+  <link rel="preload" as="image" href="http://localhost:1313/github.svg" /><link rel="preload" as="image" href="http://localhost:1313/linkedin.svg" />
 
   <link
   rel="stylesheet"
@@ -159,12 +159,6 @@ with it." />
   <div
     class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full flex-col justify-center bg-(--bg) pb-16 duration-200 select-none lg:static lg:h-auto lg:flex-row lg:bg-transparent! lg:pb-0 lg:transition-none"
   ><nav
-      class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-10 rtl:space-x-reverse"
-    ><a
-        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
-        href="/about/"
-        >About</a
-      ></nav><nav
       class="mt-12 flex justify-center space-x-10 lg:mt-0 lg:items-center ltr:lg:ml-14 rtl:space-x-reverse rtl:lg:mr-14 dark:invert"
     >
       <a
@@ -181,13 +175,6 @@ with it." />
         target="_blank"
         rel="me"
       >linkedin</a>
-      <a
-        class="h-7 w-7 text-[0px] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
-        style="--url: url(./rss.svg)"
-        href="http://localhost:1313/index.xml"
-        target="_blank"
-        rel="alternate"
-      >rss</a>
     </nav>
   </div>
 </header>
@@ -240,6 +227,11 @@ an OS level on whether FaceID is even enabled)</p>
 <p>One big issue with this is if FaceID failed or was not allowed, the toggle wouldn&rsquo;t roll back. I dealt with this using a computed binding which read from my view model of the FaceID status via <code>get</code> and update during <code>set</code>. If the biometrics failed, I roll back the value. (The value that is being read from the toggle is the computed binding, but this value is derived from a value i save/get from User Defaults)</p>
 <p>Previous I ran into infinite loop issues with toggle when i tracked it via the
 <code>.onChange</code> modifier</p>
+<p>Another thing I dealt with was using @AppStorage for User Defaults. I wanted to
+mainly keep the logic inside my View Model, so instead of using @AppStorage (which i think
+is mainly designed for views), I used the standard User Defaults <code>get/set</code>.
+For properties i was monitoring (i.e user notification time and preference),
+I had the value saved but called <code>didSet</code> on it to update the UserDefaults</p>
 <p>The last tough feature was adding voice and microphone support. I basically took
 the code from Apple&rsquo;s sample code for speech recognition and adapted it to my
 app. Speech can get surprisingly tricky to handle: once again there is OS level

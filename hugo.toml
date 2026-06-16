@@ -26,7 +26,7 @@ theme = "paper"
   # instagram = 'YOUR_INSTAGRAM_ID'           # instagram.com/YOUR_INSTAGRAM_ID
   linkedin = 'keinli'             # linkedin.com/in/YOUR_LINKEDIN_ID
   
-  rss = true                                # show rss icon
+  # rss = true                              # show rss icon
 
   author = "Kein Li"
 
