@@ -7,6 +7,16 @@ theme = "paper"
 [author]
   name = "Kein Li"
 
+[[menu.main]]
+  name = "My Apps"
+  url = "/apps/"
+  weight = 10
+
+[[menu.main]]
+  name = "Blog"
+  url = "/posts/"
+  weight = 20
+
 [caches]
   [caches.images]
     dir = ':cacheDir/images'
