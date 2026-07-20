@@ -2,8 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/puzzles/swift-algos/linked-list/148-sort-list/</loc>
+    <lastmod>2026-07-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/puzzles/swift-algos/linked-list/21-merge-two-sorted-lists/</loc>
+    <lastmod>2026-07-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/puzzles/swift-algos/linked-list/23-merge-k-sorted-lists/</loc>
+    <lastmod>2026-07-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/puzzles/swift-algos/intervals/56-merge-intervals/</loc>
+    <lastmod>2026-07-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/puzzles/swift-algos/intervals/</loc>
+    <lastmod>2026-07-20T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2026-06-15T00:00:00+00:00</lastmod>
+    <lastmod>2026-07-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/puzzles/swift-algos/linked-list/</loc>
+    <lastmod>2026-07-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/puzzles/</loc>
+    <lastmod>2026-07-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/puzzles/swift-algos/</loc>
+    <lastmod>2026-07-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/</loc>
     <lastmod>2026-06-15T00:00:00+00:00</lastmod>
@@ -22,10 +46,16 @@
   </url><url>
     <loc>http://localhost:1313/about/</loc>
   </url><url>
+    <loc>http://localhost:1313/puzzles/aoc/</loc>
+  </url><url>
     <loc>http://localhost:1313/categories/</loc>
   </url><url>
     <loc>http://localhost:1313/apps/</loc>
   </url><url>
+    <loc>http://localhost:1313/puzzles/swift-algos/prefix-sum/</loc>
+  </url><url>
     <loc>http://localhost:1313/tags/</loc>
+  </url><url>
+    <loc>http://localhost:1313/puzzles/swift-algos/trees/</loc>
   </url>
 </urlset>

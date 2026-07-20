@@ -1,0 +1,49 @@
+{{- define "main" -}}
+<h1>{{ .Title }}</h1>
+{{- .Content -}}
+
+{{- range .Sections.ByWeight -}}
+  {{- $section := . -}}
+
+  {{/* Filter subsections down to ones that actually have posts */}}
+  {{- $nonEmptySubs := slice -}}
+  {{- range .Sections -}}
+    {{- if .RegularPages -}}
+      {{- $nonEmptySubs = $nonEmptySubs | append . -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- if or $section.RegularPages $nonEmptySubs -}}
+  <section id="{{ .File.Dir | urlize }}" style="margin-top: 3rem;">
+    <h2 style="font-size: 1.4rem;">{{ .Title }}</h2>
+    {{- .Content -}}
+
+    {{- with $section.RegularPages -}}
+      <ul>
+      {{- range . -}}
+        <li>
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          {{- with .Date }} <small style="opacity: 0.6;">— {{ . | time.Format ":date_medium" }}</small>{{- end -}}
+        </li>
+      {{- end -}}
+      </ul>
+    {{- end -}}
+
+    {{- range $nonEmptySubs -}}
+      <section id="{{ .File.Dir | urlize }}" style="margin-top: 2rem;">
+        <h3 style="font-size: 1.1rem;">{{ .Title }}</h3>
+        {{- .Content -}}
+        <ul>
+        {{- range .RegularPages -}}
+          <li>
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            {{- with .Date }} <small style="opacity: 0.6;">— {{ . | time.Format ":date_medium" }}</small>{{- end -}}
+          </li>
+        {{- end -}}
+        </ul>
+      </section>
+    {{- end -}}
+  </section>
+  {{- end -}}
+{{- end -}}
+{{- end -}}

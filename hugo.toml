@@ -17,6 +17,11 @@ theme = "paper"
   url = "/posts/"
   weight = 20
 
+[[menu.main]]
+  name = "Puzzles"
+  url = "/puzzles/"
+  weight = 30
+
 [caches]
   [caches.images]
     dir = ':cacheDir/images'
