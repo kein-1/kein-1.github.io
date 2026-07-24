@@ -6,8 +6,22 @@
     <description>Recent content on Kein Li</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 15 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 21 Jul 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SwiftUI view updates in @Observable vs @StateObject/@ObservedObject</title>
+      <link>http://localhost:1313/posts/observable-vs-stateobject/</link>
+      <pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/observable-vs-stateobject/</guid>
+      <description>&lt;p&gt;Sort of a continuation from the previous post &lt;a href=&#34;http://localhost:1313/posts/stateobject-vs-observedobject/&#34;&gt;@StateObject vs @ObservedObject&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;m used to using the modern @Observable macro over @StateObject/ObservedObject but when I came across Speecify&amp;rsquo;s iOS Debugging challenge, which had @StateObject/ObservedObject, it made me revisit how the @StateObject/ObservedObject differs from @Observable, and when SwiftUI decides to redraw the body.&lt;/p&gt;&#xA;&lt;p&gt;I added print statements in the &lt;code&gt;init&lt;/code&gt; of each child view along with the SwiftUI printChanges() in the body of each child view to see what actually runs.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>SwiftUI differences in @StateObject vs @ObservedObject</title>
+      <link>http://localhost:1313/posts/stateobject-vs-observedobject/</link>
+      <pubDate>Mon, 20 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/stateobject-vs-observedobject/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m used to using the modern @Observable macro over @StateObject/ObservedObject but when I came across Speecify&amp;rsquo;s iOS Debugging challenge, which had @StateObject/ObservedObject, I was curious when to use each, how the @StateObject/ObservedObject differs from each other.&lt;/p&gt;&#xA;&lt;p&gt;Starting with @StateObject/@ObservedObject: notice what happens if we initialize the view model&#xA;inline and pass it to the child, where the child stores it via @ObservedObject.&#xA;No issues when we increment the counter in the child and we see the update take effect.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Swift Fudamentals 1 - Structs v Classes</title>
       <link>http://localhost:1313/posts/structs-v-class/</link>
