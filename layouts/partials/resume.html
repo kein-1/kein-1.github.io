@@ -1,0 +1,42 @@
+{{- /* Accordion Work / Projects sections, driven by data/resume.yaml */ -}}
+{{- $sections := slice
+  (dict "heading" "Work"     "items" site.Data.resume.work)
+  (dict "heading" "Projects" "items" site.Data.resume.projects)
+-}}
+{{- range $sections -}}
+{{- if .items -}}
+<section class="resume">
+  <h2 class="resume-heading">{{ .heading }}</h2>
+  {{- range .items -}}
+  {{- if .details -}}
+  <details class="resume-item">
+    <summary class="resume-summary">
+      <div class="resume-row">
+        <span class="resume-title">
+          <span class="resume-name">{{ .title }}</span>
+          {{- with .role }} <span class="resume-role">— {{ . }}</span>{{ end -}}
+          {{- with .dates }}<span class="resume-dates">{{ . }}</span>{{ end -}}
+        </span>
+        <svg class="resume-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </div>
+    </summary>
+    <div class="resume-body prose">{{ .details | markdownify }}</div>
+  </details>
+  {{- else -}}
+  <div class="resume-item resume-item--static">
+    <div class="resume-row resume-row--static">
+      <span class="resume-title">
+        {{- if .link -}}<a class="resume-name link" href="{{ .link | relURL }}">{{ .title }}</a>
+        {{- else -}}<span class="resume-name">{{ .title }}</span>{{- end -}}
+        {{- with .role }} <span class="resume-role">— {{ . }}</span>{{ end -}}
+        {{- with .dates }}<span class="resume-dates">{{ . }}</span>{{ end -}}
+      </span>
+    </div>
+  </div>
+  {{- end -}}
+  {{- end -}}
+</section>
+{{- end -}}
+{{- end -}}

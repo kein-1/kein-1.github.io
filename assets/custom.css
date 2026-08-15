@@ -1,0 +1,101 @@
+/* Place custom css here. */
+
+/* --- Resume accordion (Work / Projects) --- */
+.resume {
+  margin-top: 2.5rem;
+}
+.resume-heading {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #000;
+  margin: 0 0 0.25rem;
+}
+.dark .resume-heading {
+  color: #fff;
+}
+
+.resume-item {
+  border-top: 0.5px solid rgba(0, 0, 0, 0.1);
+}
+.dark .resume-item {
+  border-top-color: rgba(255, 255, 255, 0.12);
+}
+.resume:first-of-type .resume-item:first-of-type,
+.resume-item:first-of-type {
+  border-top: none;
+}
+
+.resume-summary {
+  list-style: none;
+  cursor: pointer;
+}
+.resume-summary::-webkit-details-marker {
+  display: none;
+}
+.resume-summary:focus {
+  outline: none;
+}
+.resume-summary:focus-visible {
+  outline: 2px solid var(--color-orange-500, #fc7100);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.resume-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.85rem 0;
+}
+.resume-row--static {
+  cursor: default;
+}
+
+.resume-title {
+  flex: 1 1 auto;
+  min-width: 0;
+  line-height: 1.4;
+}
+.resume-name {
+  font-weight: 500;
+  color: #000;
+}
+.dark .resume-name {
+  color: #fff;
+}
+a.resume-name:hover {
+  text-decoration: underline;
+}
+.resume-role {
+  opacity: 0.55;
+  margin-left: 0.3rem;
+}
+.resume-dates {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 0.875rem;
+  opacity: 0.5;
+}
+
+.resume-chevron {
+  flex-shrink: 0;
+  opacity: 0.45;
+  transition: transform 0.2s var(--ease-out, ease);
+}
+.resume-item[open] .resume-chevron {
+  transform: rotate(180deg);
+}
+
+.resume-body {
+  padding: 0 0 1.1rem;
+  max-width: none;
+}
+.resume-body > :first-child {
+  margin-top: 0;
+}
+.resume-body > :last-child {
+  margin-bottom: 0;
+}

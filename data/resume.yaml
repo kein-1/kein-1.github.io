@@ -1,0 +1,28 @@
+# Landing-page Work / Projects sections.
+# Each entry: title (required), role, dates, and an optional `details`
+# block (Markdown). Leave `details` empty for a non-expandable row.
+# Reorder freely — entries render top-to-bottom.
+
+work:
+  - title: Syska Hennessy
+    role: Software Engineer
+    dates: 2025 - Present
+    details: |
+      Joined as the first developer, a full stack dev. Now I handle
+      all mobile development (iOS) while shipping backend features.
+
+      - **Digiduct** (iOS) — a duct calculator app used by engineers. Owned
+        it 0→1, everything related.
+      - **EliteCX** (iOS) — an offline-first commissioning app that replaced a
+        paid third-party tool, cutting contract costs.
+      - **RFIAnalyzer** — an internal, webhook-based semantic search tool
+        built with Vapor, saving the team hours of manual lookup.
+
+projects:
+  - title: DayMark
+    role: A 50-word daily journal
+    link: /apps/
+
+  - title: Mochi
+    role: An all-in-one pet tracker
+    link: /apps/
