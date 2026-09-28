@@ -4,6 +4,7 @@ date = 2026-02-22
 draft = false
 weight = 0
 author = "Kein Li"
+category = "ios"
 +++
 
 ### Building Out a Mini iOS Manga App

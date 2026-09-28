@@ -3,6 +3,7 @@ title = "Swift Fudamentals 2 - Closures"
 date = 2026-06-15
 draft = true
 author = "Kein Li"
+category = "ios"
 +++
 
 

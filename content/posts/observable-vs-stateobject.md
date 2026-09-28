@@ -3,6 +3,7 @@ title = "SwiftUI view updates in @Observable vs @StateObject/@ObservedObject"
 date = 2026-07-21
 draft = false
 author = "Kein Li"
+category = "ios"
 +++
 
 Sort of a continuation from the previous post [@StateObject vs @ObservedObject](/posts/stateobject-vs-observedobject/).

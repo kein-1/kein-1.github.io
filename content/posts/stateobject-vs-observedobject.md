@@ -3,6 +3,7 @@ title = "SwiftUI differences in @StateObject vs @ObservedObject"
 date = 2026-07-20
 draft = false
 author = "Kein Li"
+category = "ios"
 +++
 
 I'm used to using the modern @Observable macro over @StateObject/ObservedObject but when I came across Speecify's iOS Debugging challenge, which had @StateObject/ObservedObject, I was curious when to use each, how the @StateObject/ObservedObject differs from each other.

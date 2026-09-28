@@ -3,6 +3,7 @@ title = "Swift Fudamentals 1 - Structs v Classes"
 date = 2026-06-15
 draft = false
 author = "Kein Li"
+category = "ios"
 +++
 
 

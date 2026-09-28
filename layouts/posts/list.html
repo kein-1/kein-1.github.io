@@ -1,0 +1,30 @@
+{{- define "main" -}}
+<style>
+  .post-index { list-style: disc; padding-left: 1.2em; margin: 0 0 3rem; font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: .95em; }
+  .post-index li { margin: 1em 0; }
+  .post-index .date { display: inline-block; width: 18ch; }
+  .post-index .sep { margin-right: .75ch; }
+  .post-index a { opacity: .7; text-decoration: none; }
+  .post-index a:hover { opacity: 1; text-decoration: underline; }
+</style>
+
+{{- $sections := slice
+  (dict "key" "ios" "title" "iOS / SWE")
+  (dict "key" "thoughts" "title" "Thoughts") -}}
+
+{{- range $sections -}}
+  {{- $title := .title -}}
+  {{- with where $.RegularPages "Params.category" .key -}}
+  <h2>{{ $title }}</h2>
+  <ul class="post-index not-prose">
+    {{- range .ByDate.Reverse -}}
+    <li>
+      <span class="date">{{ .Date | time.Format "2006 January 2" }}</span>
+      <span class="sep">|</span>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </li>
+    {{- end -}}
+  </ul>
+  {{- end -}}
+{{- end -}}
+{{- end -}}

@@ -3,6 +3,7 @@ title = "Building out DayMark - 0 to 1"
 date = 2026-03-16
 draft = false
 author = "Kein Li"
+category = "ios"
 +++
 
 ### Building Out DayMark App
